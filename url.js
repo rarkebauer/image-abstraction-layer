@@ -1,5 +1,4 @@
-
-var constants = require('./constants.js');
+var constants = require('./constants.js') || null;
 var key = constants.apiKey || process.env.KEY;
 var cx = constants.cx || process.env.CX;
 
@@ -9,7 +8,6 @@ module.exports = {
 		for(var i=0; i<response.items.length; i++){
 		item.push({title: response.items[i].title, link: response.items[i].link, snippet: response.items[i].snippet});
 		}
-		//want title, link(url), snippet
 		return item;
 	},
 	createUrl: function(param) {

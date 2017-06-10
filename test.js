@@ -15,7 +15,7 @@ describe('GET /', function() {
 		  .expect(200)
 		  .end(function(err, res) {  //.expect() functions that fail will not throw instead they will return the assertion as an error to the .end() callback
 		  	if(err) return done(err);
-		  	expect(res.text).to.equal('Welcome to the express server') 
+		  	expect(res.text).to.equal('Welcome to Rachel\'s custom image search') 
 		  	done();
 		  });
 	});

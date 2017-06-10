@@ -6,7 +6,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var url = require('./url.js');
-var constants = require('./constants.js');
+//var constants = require('./constants.js');
 
 var myUrl;
 var history = [];
