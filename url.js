@@ -1,12 +1,25 @@
 
-module.exports = {
-	checkUrl: function(arg) {
-		var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-		var regex = new RegExp(expression);
+var constants = require('./constants.js');
+var key = constants.apiKey;
+var cx = constants.cx;
 
-		if(arg.match(regex)) {
-			return "this IS a valid url"
+module.exports = {
+	handler: function(response) {
+		var item = [];
+		for(var i=0; i<response.items.length; i++){
+		item.push({title: response.items[i].title, link: response.items[i].link, snippet: response.items[i].snippet});
 		}
-		return {"error":"this is not a valid url"};
+		//want title, link(url), snippet
+		return item;
+	},
+	createUrl: function(param) {
+		return 'https://www.googleapis.com/customsearch/v1?key=' + key + '&cx=' + cx + '&q=' + param;
+	},
+
+	recordHistory: function(title) {
+		var date = new Date();
+		
+		return {term: title, when: date};
 	}
+	
 }
