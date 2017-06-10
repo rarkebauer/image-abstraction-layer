@@ -1,6 +1,6 @@
 var constants = require('./constants.js') || null;
-var key = constants.apiKey || process.env.KEY;
-var cx = constants.cx || process.env.CX;
+var key = constants.apiKey || process.env[KEY];
+var cx = constants.cx || process.env[CX];
 
 module.exports = {
 	handler: function(response) {
