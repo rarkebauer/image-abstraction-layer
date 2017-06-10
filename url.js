@@ -1,4 +1,4 @@
-var constants = require('./constants.js') || null;
+var constants = require('./constants.js');
 var key = constants.apiKey || process.env[KEY];
 var cx = constants.cx || process.env[CX];
 
