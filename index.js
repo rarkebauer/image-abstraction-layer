@@ -27,12 +27,19 @@ function urlRoute(req, res, callback) {
 function queryApi(req, res){
  	var result = '';
  	var myBody = '';
+
    request(myUrl, function(error, responseData, body){
   	console.log('error: ', error);
   	console.log('statusCode: ', responseData && responseData.statusCode);
+
+ 	//console.log(req.query.offset);
+ 	//console.log(req.query.num)
+
+
   	myBody = JSON.parse(body); 
   	result = url.handler(myBody);
   	res.send(result);
+  	console.log(myBody.queries.nextPage)
   })
 }
 

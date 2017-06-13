@@ -1,4 +1,5 @@
 var constants = require('./constants.js');
+//for heroku version get rid of constants.js line and uncomment out the key and cx lines and comment out constants.apiKey
 var key = constants.apiKey || process.env.KEY;
 //var key = process.env.KEY;
 var cx = constants.cx || process.env.CX;

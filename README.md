@@ -10,7 +10,7 @@ On Heroku:
 https://fast-shore-43365.herokuapp.com/api/imagesearch/YOUR SEARCH TERM
 https://fast-shore-43365.herokuapp.com/api/latest/imagesearch/
 
-In order to make the application work, you must create a file named 'constants.js' and include the following code:
+In order to make the application work on your local system, you must create a file named 'constants.js' and include the following code:
 var apiKey = XXX;	
 var cx = XXX;
 
