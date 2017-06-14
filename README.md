@@ -1,6 +1,6 @@
 This is a project from Free Code Camp's backend certification
 
-This is a full stack javascript application that allows users to search for images and browse recent search queries. The search will return page titles, image links, and descriptive snippets. The user can paginate through the responses by adding a ?offset=2 parameter to the URL.
+This is a full stack javascript application that allows users to search for images and browse recent search queries. The search will return page titles, image links, and descriptive snippets. The user can paginate through the responses by adding a ?offset=2 parameter to the URL for the second page, ?offset=3 parameter for the third page, etc.
 
 On your local system:
 search: http://localhost:3000/api/imagesearch/YOUR SEARCH TERM

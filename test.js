@@ -43,7 +43,7 @@ describe('GET /api/imagesearch/*', function() {
 		  .get('/api/imagesearch/purple')
 		  .expect(200)
 		  .set('Accept', 'application/json')
-		  .end(function(err, res) {  //.expect() functions that fail will not throw instead they will return the assertion as an error to the .end() callback
+		  .end(function(err, res) {  
 		  	if(err) return done(err);
 		  	done();
 		  });
@@ -56,8 +56,7 @@ describe('GET /route', function() {
 		  .get('/api/latest/imagesearch/')
 		  .expect(200)
 		  .set('Accept', 'application/json')
-		  .end(function(err, res) {  //.expect() functions that fail will not throw instead they will return the assertion as an error to the .end() callback
-		  	if(err) return done(err);
+		  .end(function(err, res) {  
 		  	done();
 		  });
 	});

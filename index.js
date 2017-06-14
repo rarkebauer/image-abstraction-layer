@@ -27,19 +27,20 @@ function urlRoute(req, res, callback) {
 function queryApi(req, res){
  	var result = '';
  	var myBody = '';
+ 	if(req.query.offset){
+ 		var resultCount;
+ 		resultCount = (req.query.offset*10) - 9; //if 2 change to 11, if 3 change to 21
+ 		myUrl = myUrl + '&start=' + resultCount;
+ 	}
 
    request(myUrl, function(error, responseData, body){
   	console.log('error: ', error);
   	console.log('statusCode: ', responseData && responseData.statusCode);
-
- 	//console.log(req.query.offset);
- 	//console.log(req.query.num)
-
-
+  	
   	myBody = JSON.parse(body); 
   	result = url.handler(myBody);
   	res.send(result);
-  	console.log(myBody.queries.nextPage)
+  
   })
 }
 
